@@ -1,0 +1,229 @@
+PS C:\Users\V MALATHI\Desktop\Gitdemo> git init
+Reinitialized existing Git repository in C:/Users/V MALATHI/Desktop/Gitdemo/.git/
+PS C:\Users\V MALATHI\Desktop\Gitdemo> cd ..
+PS C:\Users\V MALATHI\Desktop\Gitdemo> mkdir Overthink
+
+
+    Directory: C:\Users\V MALATHI\Desktop\Gitdemo
+
+
+d-----        05-03-2026     23:29                Overthink                                                                
+
+
+PS C:\Users\V MALATHI\Desktop\Gitdemo> pwd
+
+----
+
+
+PS C:\Users\V MALATHI\Desktop\Gitdemo> cd Project
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git branch
+* main
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> touch malathi.html
+touch : The term 'touch' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the  
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ touch malathi.html
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git add index.html
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> add index.html
+At line:1 char:1
++ add index.html
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git commit -m "added new p tag"
+[main 5a8b627] added new p tag
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git add .
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git commit -m "another new p tag is added"
+[main 844f7bb] another new p tag is added
+ 1 file changed, 2 insertions(+)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git add .
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git commit -m "color added to the p tag"
+[main 6533158] color added to the p tag
+ 1 file changed, 4 insertions(+)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git log
+Date:   Thu Mar 5 23:41:57 2026 +0530
+
+commit 844f7bbc0a9ddd8c4551832fe0b07eaa0ef8c205
+Date:   Thu Mar 5 23:41:02 2026 +0530
+    another new p tag is added
+
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project>
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git branch
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git branch feature-update
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git branch
+  feature-update
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git checkout branch
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git chekcout main
+git: 'chekcout' is not a git command. See 'git --help'.
+        checkout
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git checkout main
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git checkout feature-update
+Switched to branch 'feature-update'
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git branch
+* feature-update
+  main
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git add .
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git commit -m "p tag added in new feature-update branch of html"
+ 1 file changed, 1 insertion(+)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git log --oneline
+abf27f1 (HEAD -> feature-update) p tag added in new feature-update branch of html
+844f7bb another new p tag is added
+5a8b627 added new p tag
+5f6d7f7 Title set to JashMelo and desc added
+6a09bad Initial commit
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 6 commits.
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git branch
+  feature-update
+* main
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git merge
+Updating 6533158..abf27f1
+Fast-forward
+ 1 file changed, 1 insertion(+)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git checkout main
+Already on 'main'
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git checkout feature-update
+Switched to branch 'feature-update'
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git add .
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git commit -m"merge conflict is added"
+[feature-update 880b3d3] merge conflict is added
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 7 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git diff
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git diff feature-update
+--- a/index.html
++++ b/index.html
+@@ -14,7 +14,7 @@
+     <p>Welcome to Git demo Lab</p>
+     <p>My Second update in html</p>
+-    <span>Content is added to feature-update folder</span>
+
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git merge feature-update
+Updating abf27f1..880b3d3
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git branch
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git checkout feature-update
+Switched to branch 'feature-update'
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git commit -m "h1 to say hi"
+[feature-update 2499df2] h1 to say hi
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 8 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git add .
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git commit -m "h1 is added to wish u"
+[main 09b6ea4] h1 is added to wish u
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git diff feature-update
+index d3b63a1..7c94796 100644
+--- a/index.html
++++ b/index.html
+     <p>My Second update in html</p>
+-    <h1>hello world</h1>
++    <h1>today is a good day</h1>
+   </body>
+ </html>
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git merge feature-update
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git add .
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git commit -m "merge conflict resolved"
+[main 79711a6] merge conflict resolved
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git log
+Merge: 09b6ea4 2499df2
+Author: Malathi <vanapallimalathi2007@gmail.com>
+Date:   Thu Mar 5 23:58:58 2026 +0530
+
+    merge conflict resolved
+
+commit 09b6ea45a8304269d5748cdf18349a6eacb94120
+Author: Malathi <vanapallimalathi2007@gmail.com>
+Date:   Thu Mar 5 23:57:25 2026 +0530
+
+    h1 is added to wish u
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git log --oneline --graph --all --decorate
+|\
+| * 2499df2 (feature-update) h1 to say hi
+* | 09b6ea4 h1 is added to wish u
+|/
+* 880b3d3 merge conflict is added
+* abf27f1 p tag added in new feature-update branch of html
+* 6533158 color added to the p tag
+* 844f7bb another new p tag is added
+* 5a8b627 added new p tag
+* 5356a02 initial commit with html file
+On branch main
+Your branch is ahead of 'origin/main' by 11 commits.
+
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git add .
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git commit -m "modified"
+[main 948e290] modified
+ 1 file changed, 3 deletions(-)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git log --online --graph --all --decorate 
+fatal: unrecognized argument: --online
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git log --oneline --graph --all --decorate
+*   79711a6 merge conflict resolved
+|\
+| * 2499df2 (feature-update) h1 to say hi
+* | 09b6ea4 h1 is added to wish u
+|/
+* 880b3d3 merge conflict is added
+* abf27f1 p tag added in new feature-update branch of html
+* 6533158 color added to the p tag
+* 844f7bb another new p tag is added
+* 5a8b627 added new p tag
+* 5356a02 initial commit with html file
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> cat index.html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple project</title>
+    <style>
+    p{
+      color:orange;
+
+    }
+      
+    </style>
+  </head>
+  <body>
+    <p>Welcome to Git demo Lab</p>
+    <p>My first update in html</p>
+    <p>My Second update in html</p>
+    <span>Content is added to feature-update folder</span>
+    <h1>today is a good day</h1>
+    <h1>hello world</h1>
+  </body>
+</html>
