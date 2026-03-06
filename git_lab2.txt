@@ -1,0 +1,32 @@
+PS C:\Users\V MALATHI\Desktop\Gitdemo> cd Overthink
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Overthink> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Overthink> git remote add origin https://github.com/Malathi-vanapalli/Sample.git     
+error: remote origin already exists.
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Overthink> git remote -v
+origin  https://github.com/Malathi-vanapalli/REPO.git (fetch)
+origin  https://github.com/Malathi-vanapalli/REPO.git (push)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Overthink> git remote remove origin
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Overthink> git remote -v
+origin  https://github.com/Malathi-vanapalli/Sample.git (fetch)
+origin  https://github.com/Malathi-vanapalli/Sample.git (push)
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Overthink> git status
+On branch main
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Overthink> git add -A
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Overthink> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Overthink> git commit -m "new html file is added"
+[main 757dbd6] new html file is added
+ 1 file changed, 11 insertions(+)
+ create mode 100644 Overthink/index.html
