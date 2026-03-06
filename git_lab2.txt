@@ -30,3 +30,33 @@ PS C:\Users\V MALATHI\Desktop\Gitdemo\Overthink> git commit -m "new html file is
 [main 757dbd6] new html file is added
  1 file changed, 11 insertions(+)
  create mode 100644 Overthink/index.html
+
+ Reinitialized existing Git repository in C:/Users/V MALATHI/Desktop/Gitdemo/Project/.git/
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git status
+On branch main
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git_lab2.txt
+
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git add -A
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git commit -m "new text file added"
+[main 3750deb] new text file added
+ 1 file changed, 32 insertions(+)
+ create mode 100644 git_lab2.txt
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 820 bytes | 410.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Malathi-vanapalli/Project.git
+   1608119..3750deb  main -> main
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> 
