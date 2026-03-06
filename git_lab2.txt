@@ -60,3 +60,33 @@ Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To https://github.com/Malathi-vanapalli/Project.git
    1608119..3750deb  main -> main
 PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> 
+
+PS C:\Users\V MALATHI\Desktop\Gitdemo> git checkout main
+Already on 'main'
+PS C:\Users\V MALATHI\Desktop\Gitdemo> git checkout feature1
+warning: unable to rmdir 'Project': Directory not empty
+PS C:\Users\V MALATHI\Desktop\Gitdemo> git checkout main
+Switched to branch 'main'
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git branch -M feature1
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git branch
+  feature-update
+* feature1
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git status
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git commit -m "new branch was added"
+On branch feature1
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git diff main
+fatal: ambiguous argument 'main': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git diff
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> git branch
+  feature-update
+* feature1
+PS C:\Users\V MALATHI\Desktop\Gitdemo\Project> 
